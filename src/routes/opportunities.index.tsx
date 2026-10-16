@@ -3,7 +3,7 @@ import { SearchX } from "lucide-react";
 import { ARRANGEMENTS, CATEGORIES, LOCATIONS, OPPORTUNITIES, TYPES } from "@/lib/opportunities";
 import { EmptyState, OpportunityCard } from "@/components/site";
 
-type S = { q?: string; category?: string; location?: string; arrangement?: string; type?: string };
+type S = { q?: string | undefined; category?: string | undefined; location?: string | undefined; arrangement?: string | undefined; type?: string | undefined };
 
 export const Route = createFileRoute("/opportunities/")({
   validateSearch: (s: Record<string, unknown>): S => {
