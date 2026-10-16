@@ -8,7 +8,7 @@ type S = { q?: string; category?: string; location?: string; arrangement?: strin
 export const Route = createFileRoute("/opportunities/")({
   validateSearch: (s: Record<string, unknown>): S => {
     const str = (v: unknown) => (typeof v === "string" && v ? v : undefined);
-    return { q: str(s.q), category: str(s.category), location: str(s.location), arrangement: str(s.arrangement), type: str(s.type) };
+    return { q: str(s["q"]), category: str(s["category"]), location: str(s["location"]), arrangement: str(s["arrangement"]), type: str(s["type"]) };
   },
   head: () => ({
     meta: [
