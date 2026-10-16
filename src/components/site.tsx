@@ -19,7 +19,7 @@ export function Header() {
           <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground">
             <Briefcase className="h-5 w-5" />
           </span>
-          Opportunity<span className="text-accent">Connect</span>
+          <span>Opportunity<span className="text-accent">Connect</span></span>
         </Link>
         <nav className="hidden gap-1 md:flex" aria-label="Main">
           {NAV.map((n) => (
